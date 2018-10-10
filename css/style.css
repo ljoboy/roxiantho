@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+.row {
+    content: "";
+    display: table;
+    clear: both;
+    background-color: black;
+    width: 100%;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+line {
+    display: block;
+}
+
+.container {
+    padding: 2%;
+}
+
+.c1 {
+    width: 100%;
+}
+
+.c2 {
+    text-align: center;
+    float: left;
+    height: auto;
+    width: 50%;
+    text-transform: uppercase;
+    font-size: xx-large;
+    padding: 4%;
+}
+
+.c3 {
+    width: 33.33%;
+}
+
+.c4 {
+    width: 24%;
+    padding: 1%;
+}
+
+.c5 {
+    width: 20%;
+}
+
+.c6 {
+    width: 16.67%;
+}
+
+.green {
+    background-color: green;
+}
+
+.cyan {
+    background-color: cyan;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.black {
+    background-color: black;
+}
+
+.grey {
+    background-color: grey;
+}
+
+.red {
+    background-color: red;
+}
+
+.brown {
+    background-color: brown;
+}
+
+.violet {
+    background-color: blueviolet;
+}
