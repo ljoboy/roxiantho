@@ -1,11 +1,11 @@
 {
-  "name": "junior",
-  "version": "1.0.0",
-  "description": "Un jeux de shuffling",
-  "main": "index.html",
-  "scripts": {
-    "test": "mocha"
-  },
-  "author": "Junior Yombo",
-  "license": "MIT"
+    "name": "roxi-antho",
+    "version": "1.0.0",
+    "description": "Un jeux de shuffling",
+    "main": "index.html",
+    "scripts": {
+        "test": "mocha"
+    },
+    "author": "Junior Yombo",
+    "license": "MIT"
 }
