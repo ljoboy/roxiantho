@@ -14,14 +14,11 @@ $("button").click(() => {
     chWord = setInterval(() => {
         color();
         rep = Math.floor(Math.random() * div.length);
-        for (let i = 0; i < div.length; i++) {
-            el = div[i];
-            if (rep == i) {
-                el.text("Gagnant");
-            } else {
-                el.text("Trouve moi");
-            }
-        }
+        div[0].text("trouve moi");
+        div[1].text("trouve moi");
+        div[2].text("trouve moi");
+        div[3].text("trouve moi");
+        div[rep].text("gagnant");
     }, 500);
     setTimeout(() => {
         blackify();
