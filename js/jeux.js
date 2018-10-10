@@ -1,16 +1,26 @@
 var div = [$("#1"), $("#2"), $("#3"), $("#4")];
 var rep;
-var color = ["red", "brown", "cyan", "blue", "green", "black", "violet"];
+var colors = ["red", "brown", "cyan", "blue", "green", "violet", "grey"];
+
+function color() {
+    for (let i = 0; i < div.length; i++) {
+        const el = div[i];
+        el.toggleClass(colors[Math.floor(Math.random() * colors.length)]);
+    }
+}
+color();
 $("button").click(() => {
     rep = div[Math.floor(Math.random() * div.length)];
     setTimeout(() => {
         rep.html("Gagnant");
     }, 300);
+    chColor = setInterval(color, 250);
     setTimeout(() => {
         rep.html("Trouve moi");
-    }, 1700);
-    // div[0].animate({ left: "680px" });
-    // div[1].animate({ right: "680px" });
+    }, 1000);
+    setTimeout(() => {
+        clearInterval(chColor);
+    }, 3000);
 });
 $(".parent").click(
     (e) => {
