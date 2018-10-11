@@ -36,8 +36,9 @@ $(".parent").click(
         if (jo) {
             if (e.target.id === jo[0].id) {
                 swal("Gagner", "Réponse correcte", "success");
-                color();
                 lance = 0;
+                jo = false;
+                color();
             } else {
                 swal("Perdu", "Réponse Incorrecte", "error");
             }
