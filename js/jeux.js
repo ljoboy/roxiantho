@@ -50,3 +50,8 @@ function aide() {
     var noir = $("<div class='noir'></div>");
     $("body").prepend(carree, noir);
 }
+
+function fermer() {
+    $(".noir").remove();
+    $(".carree").remove();
+}
