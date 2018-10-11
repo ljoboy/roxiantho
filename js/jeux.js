@@ -1,30 +1,34 @@
 var div = [$("#1"), $("#2"), $("#3"), $("#4")];
-var jo, rep;
+var jo, rep, lance = 0;
 var colors = ["red", "brown", "cyan", "blue", "green", "violet", "grey"];
 
 function color() {
     for (let i = 0; i < div.length; i++) {
         const el = div[i];
         el.attr("class", "c2 txt bordr " + colors[Math.floor(Math.random() * colors.length)]);
-    }
-}
-color();
-$("button").click(() => {
-
-    chWord = setInterval(() => {
-        color();
-        rep = Math.floor(Math.random() * div.length);
         div[0].text("trouve moi");
         div[1].text("trouve moi");
         div[2].text("trouve moi");
         div[3].text("trouve moi");
-        div[rep].text("gagnant");
-    }, 500);
-    setTimeout(() => {
-        blackify();
-        jo = div[rep];
-        clearInterval(chWord);
-    }, 3000);
+    }
+}
+color();
+$("button").click((e) => {
+    e.preventDefault();
+    if (lance === 0) {
+        chWord = setInterval(() => {
+            color();
+            rep = Math.floor(Math.random() * div.length);
+            div[rep].text("gagnant");
+        }, 500);
+        setTimeout(() => {
+            blackify();
+            jo = div[rep];
+            clearInterval(chWord);
+        }, 3000);
+        lance = 1;
+    }
+
 
 });
 $(".parent").click(
@@ -32,6 +36,8 @@ $(".parent").click(
         if (jo) {
             if (e.target.id === jo[0].id) {
                 swal("Gagner", "Réponse correcte", "success");
+                color();
+                lance = 0;
             } else {
                 swal("Perdu", "Réponse Incorrecte", "error");
             }
