@@ -1,4 +1,4 @@
-var div = [$("#1"), $("#2"), $("#3"), $("#4")];
+var div = [$('#1'), $('#2'), $('#3'), $('#4')];
 var jo, rep, lance = 0;
 var colors = ["red", "brown", "cyan", "blue", "green", "violet", "grey"];
 
@@ -60,7 +60,8 @@ function aide() {
     var carree = $("<div class='carree'></div>");
     var noir = $("<div class='noir'></div>");
     var p = $("<p class='p'></p>");
-    p.html("Ce jeux consiste &agrave; retrouver le dernier emplacement du mot <b>Gagnant</b>");
+    p.html("Ce jeux consiste &agrave; retrouver le dernier emplacement du mot <b>Gagnant</b>.<br/>Jeux concu et " +
+        "realiser avec l'aide de <b>Junior Yombo Sosse</b>");
     carree.prepend("<div class='fermer darkred' onclick='fermer()'>&#10060;</div>");
     carree.append(p);
     $("body").prepend(noir, carree);
