@@ -16,7 +16,7 @@ color();
 $("button").click((e) => {
     e.preventDefault();
     if (lance === 0) {
-        chWord = setInterval(() => {
+        var chWord = setInterval(() => {
             color();
             rep = Math.floor(Math.random() * div.length);
             div[rep].text("gagnant");
