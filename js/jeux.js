@@ -5,7 +5,7 @@ var colors = ["red", "brown", "cyan", "blue", "green", "violet", "grey"];
 function color() {
     for (let i = 0; i < div.length; i++) {
         const el = div[i];
-        el.attr("class", "c2 " + colors[Math.floor(Math.random() * colors.length)]);
+        el.attr("class", "c2 txt bordr " + colors[Math.floor(Math.random() * colors.length)]);
     }
 }
 color();
@@ -29,10 +29,14 @@ $("button").click(() => {
 });
 $(".parent").click(
     (e) => {
-        if (e.target.id === jo[0].id) {
-            swal("Gagner", "Réponse correcte", "success");
+        if (jo) {
+            if (e.target.id === jo[0].id) {
+                swal("Gagner", "Réponse correcte", "success");
+            } else {
+                swal("Perdu", "Réponse Incorrecte", "error");
+            }
         } else {
-            swal("Perdu", "Réponse Incorrecte", "error");
+            swal("Attention", "Veuillez cliquer sur play pour commencer", "warning");
         }
     }
 );
@@ -40,7 +44,7 @@ $(".parent").click(
 function blackify() {
     for (let i = 0; i < div.length; i++) {
         const el = div[i];
-        el.attr("class", "c2 black txt");
+        el.attr("class", "c2 black txt border");
         el.html(i + 1);
     }
 }
@@ -48,7 +52,11 @@ function blackify() {
 function aide() {
     var carree = $("<div class='carree'></div>");
     var noir = $("<div class='noir'></div>");
-    $("body").prepend(carree, noir);
+    var p = $("<p class='p'></p>");
+    p.html("Ce jeux consiste &agrave; retrouver le dernier emplacement du mot <b>Gagnant</b>");
+    carree.prepend("<div class='fermer darkred' onclick='fermer()'>&#10060;</div>");
+    carree.append(p);
+    $("body").prepend(noir, carree);
 }
 
 function fermer() {
