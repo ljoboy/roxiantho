@@ -44,3 +44,9 @@ function blackify() {
         el.html(i + 1);
     }
 }
+
+function aide() {
+    var carree = $("<div class='carree'></div>");
+    var noir = $("<div class='noir'></div>");
+    $("body").prepend(carree, noir);
+}
