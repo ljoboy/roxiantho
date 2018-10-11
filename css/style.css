@@ -118,7 +118,8 @@ button {
 }
 
 button:hover,
-small:hover {
+small:hover,
+input[type="button"]:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -134,14 +135,14 @@ small {
     width: 100%;
     height: 100%;
     background-color: black;
-    position: absolute;
+    position: fixed;
     z-index: 9998;
     opacity: 0.75;
 }
 
 .carree {
     z-index: 9999;
-    position: absolute;
+    position: fixed;
     background-color: whitesmoke;
     margin: 10%;
     width: 80%;
@@ -154,4 +155,25 @@ small {
     float: right;
     padding: 0.5%;
     cursor: pointer;
+}
+
+.p {
+    padding: 8%;
+    font-size: xx-large;
+}
+
+.fermer:hover {
+    background-color: red;
+}
+
+.border {
+    border: solid 2px white;
+}
+
+input[type="button"] {
+    cursor: pointer;
+}
+
+.bordr {
+    border: 1px solid white;
 }
