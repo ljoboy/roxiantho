@@ -177,3 +177,40 @@ input[type="button"] {
 .bordr {
     border: 1px solid white;
 }
+.new-div{
+    width: 500px;
+    margin-left: 2%;
+}
+.darkbutton{
+    text-align: center;
+    float: left;
+    height: auto;
+    text-transform: uppercase;
+    font-size: large;
+    vertical-align: center;
+    box-align: center;
+    padding: 2%;
+    
+}
+.darkmode{
+    background-color: black;
+}
+.white{
+    color: white;
+}
+.bouton-suivant{
+    text-align: center;
+    margin-right: 2%;
+    float: right;
+    height: auto;
+    text-transform: uppercase;
+    font-size: large;
+    vertical-align: center;
+    box-align: center;
+    padding: 2%;
+    text-decoration: none;
+}
+.div-bouton-suivant{
+    width: 500px;
+    margin-left: 846px;
+}
