@@ -209,6 +209,17 @@ input[type="button"] {
     background: #301c50;
 }
 
+body{
+    background-color: #fff;
+    color: #301c50;
+    transition: all .5s ease-in-out;
+}
+
+body.dark{
+    color: #fff;
+    background-color: #301c50;
+}
+
 .bouton-suivant{
     text-align: center;
     margin-right: 2%;
