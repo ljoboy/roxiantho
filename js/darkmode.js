@@ -1,14 +1,27 @@
-var darkbutton = document.getElementById("darkbutton")
-var corp = document.getElementById("body")
-var titre = document.getElementById("titre")
+let body = document.querySelector('body');
+let toggle = document.querySelector(".toggle");
 
-function darkmode(){
-    corp.classList.toggle("darkmode")
-    titre.classList.toggle("white")
-    if (darkbutton.value=="Mode Nuit") {
-        darkbutton.value="Mode Jour"
+let stockMode = localStorage.getItem("mode");
+
+if(stockMode && stockMode === "dark"){
+    body.classList.add("dark");
+    toggle.classList.add("active");
+}
+        
+
+toggle.addEventListener("click", ()=>{
+    if(!body.classList.contains('dark')){
+            body.classList.toggle("dark");
     }
     else{
-        darkbutton.value="Mode Nuit"
+            body.classList.remove('dark')
     }
-}
+
+    if(!body.classList.contains("dark")){
+        return localStorage.setItem("mode", "light")
+    }
+    localStorage.setItem("mode", "dark");
+});
+toggle.addEventListener("click", () =>
+    toggle.classList.toggle("active")
+);
