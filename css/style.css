@@ -177,27 +177,38 @@ input[type="button"] {
 .bordr {
     border: 1px solid white;
 }
-.new-div{
-    width: 500px;
-    margin-left: 2%;
+.toggle{
+    height: 60px;
+    width: 150px;
+    position: relative;
+    border-radius: 100px;
+    background: #301c50;
+    border: 1px solid #000;
+    cursor: pointer;
 }
-.darkbutton{
-    text-align: center;
-    float: left;
-    height: auto;
-    text-transform: uppercase;
-    font-size: large;
-    vertical-align: center;
-    box-align: center;
-    padding: 2%;
-    
+
+.toggle::before{
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: all  .5s ease-in-out;
 }
-.darkmode{
-    background-color: black;
+
+.toggle.active{
+    background: #fff;
 }
-.white{
-    color: white;
+
+.toggle.active::before{
+    left: calc(100% - 50px - 5px);
+    background: #301c50;
 }
+
 .bouton-suivant{
     text-align: center;
     margin-right: 2%;
